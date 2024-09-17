@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-Wall",
+          "-Wextra",
+          "-g3",
+          "${workspaceFolder}/main.cpp",
+          "${workspaceFolder}/Customer.cpp",  // Ensure Customer.cpp is included
+          "-o",
+          "${workspaceFolder}/output/main.exe"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build the project"
+      }
+    ]
+  }
+  
