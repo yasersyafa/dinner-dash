@@ -3,6 +3,10 @@ using namespace std;
 
 Table::Table(int num) : tableNumber(num), order(nullptr) {}
 
+Customer& Table::getCustomer() {
+    return customer;
+}
+
 // place the order on the table
 void Table::placeOrder(Order* newOrder) {
     order = newOrder;

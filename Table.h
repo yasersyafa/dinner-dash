@@ -3,13 +3,15 @@
 
 #include <iostream>
 #include "Order.h"
+#include "Customer.h"
 using namespace std;
 
 class Table {
     private:
         int tableNumber;
         Order* order;
-    
+        Customer customer;
+
     public:
         // constructor
         Table(int num);
@@ -20,6 +22,7 @@ class Table {
         void updateOrderStatus(OrderStatus newStatus);
         // display the order on the table
         void displayOrder() const;
+        Customer& getCustomer();
 
 };
 
